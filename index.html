@@ -21,5 +21,19 @@
         <button class="btn btn-add">+ Add book</button>
         <div class="books-grid container"></div>
     </main>
+    <div class="book-prompt">
+        <form>
+            <h3>Add new book</h3>
+            <input class="input" type="text" id="title" placeholder="Title" required>
+            <input class="input" type="text" id="author" placeholder="Author" required>
+            <input class="input" type="number" id="pages" placeholder="Pages" required>
+            <div id="is-read">
+                <label for="is-read">Have you read it</label>
+                <input class="checkbox" type="checkbox" id="is-read">
+            </div>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="overlay"></div>
 </body>
 </html>

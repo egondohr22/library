@@ -19,6 +19,16 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+button,
+input {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  outline: none;
+}
 
 header {
   padding-top: 20px;
@@ -29,7 +39,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: white;
-  box-shadow: lightgray 0px 1px 4px;
+  box-shadow: rgb(182, 182, 182) 0px 1px 4px;
 }
 header>div {
   width: 70%;
@@ -61,4 +71,69 @@ main {
 .books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.book-prompt {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  background-color: #f0eef1;
+  transition: 0.2s ease-in-out;
+  border-radius: 8px;
+  transform: translate(-50%, -50%) scale(0);
+}
+.book-prompt>form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.book-prompt h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+#is-read {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+#is-read label {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+}
+input {
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.book-prompt.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+form button {
+  width: 100%;
+  background-color: #9fff9c;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay.active {
+  display: block;
 }
