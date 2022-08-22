@@ -29,3 +29,16 @@ class Library {
     }
 }   
 
+const library = new Library()
+
+const addBookbtn = document.getElementById('addBtn')
+const bookPrompt = document.getElementById('bookPrompt')
+
+
+const openBookPrompt = () => {
+    bookPrompt.classList.toggle('active')
+}
+
+addBookbtn.onclick = openBookPrompt
+
+
